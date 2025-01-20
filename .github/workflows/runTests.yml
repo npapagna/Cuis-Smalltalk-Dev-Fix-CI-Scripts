@@ -12,11 +12,14 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest]
+    with:
+
     steps:
       - uses: actions/checkout@v3
         with:
           path: cuis-release
       - run: pwd
+        working-directory: ./scripts
       - run: .ContinuousIntegrationScripts/installVm.sh
       - run: .ContinuousIntegrationScripts/installUpdates.sh
       - run: .ContinuousIntegrationScripts/runTests.sh
