@@ -8,6 +8,9 @@ name: Run tests
       - master
 jobs:
   Build:
+    defaults:
+      run:
+        working-directory: cuis-release
     runs-on: '${{ matrix.os }}'
     strategy:
       matrix:
@@ -17,7 +20,6 @@ jobs:
         with:
           path: cuis-release
       - run: pwd
-        working-directory: cuis-release
       - run: .ContinuousIntegrationScripts/installVm.sh
       - run: .ContinuousIntegrationScripts/installUpdates.sh
       - run: .ContinuousIntegrationScripts/runTests.sh
