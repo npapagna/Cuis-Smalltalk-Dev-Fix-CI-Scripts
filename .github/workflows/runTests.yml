@@ -19,7 +19,7 @@ jobs:
         with:
           path: cuis-release
       - run: pwd
-        working-directory: ./scripts
+        working-directory: cuis-release
       - run: .ContinuousIntegrationScripts/installVm.sh
       - run: .ContinuousIntegrationScripts/installUpdates.sh
       - run: .ContinuousIntegrationScripts/runTests.sh
