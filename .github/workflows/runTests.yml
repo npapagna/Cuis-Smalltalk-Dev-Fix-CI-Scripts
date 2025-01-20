@@ -14,6 +14,8 @@ jobs:
         os: [ubuntu-latest, macos-latest]
     steps:
       - uses: actions/checkout@v3
+        with:
+          path: cuis-release
       - run: .ContinuousIntegrationScripts/installVm.sh
       - run: .ContinuousIntegrationScripts/installUpdates.sh
       - run: .ContinuousIntegrationScripts/runTests.sh
