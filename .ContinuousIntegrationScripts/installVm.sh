@@ -29,5 +29,5 @@ case $RUNNER_OS in
 esac
 
 # Make the environment variables available to other scripts
-echo "CUIS_VM_PATH=$CUIS_VM_PATH" >> "$GITHUB_ENV"
-echo "CUIS_VM_ARGUMENTS=$CUIS_VM_ARGUMENTS" >> "$GITHUB_ENV"
+echo "CUIS_VM_PATH=\"$CUIS_VM_PATH\"" >> "$GITHUB_ENV"
+echo "CUIS_VM_ARGUMENTS=\"$CUIS_VM_ARGUMENTS\"" >> "$GITHUB_ENV"
